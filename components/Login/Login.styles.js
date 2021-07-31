@@ -29,6 +29,9 @@ export const FormInputWrapper = styled.div`
 	height: 4rem;
 	width: 30rem;
 	padding: 2rem 0;
+    form{
+      display: grid;
+    }
 	label {
 		font-size: 1.8rem;
 	}
@@ -37,5 +40,12 @@ export const FormInputWrapper = styled.div`
 		width: 100%;
 		padding: .6rem .3rem;
 		font-size: 1.8rem;
+      margin-top: 1rem;
+      background-color: var(--colour-white);
+      border: 0;
 	}
+`;
+export const ButtonWrapper = styled.div`
+
+margin-top: 2rem;
 `;
