@@ -25,6 +25,10 @@ export default function Login({
     const emailValue = e.target.value;
     return emailValue;
   };
+  const passwordHandler = (e) => {
+    const passwordValue = e.target.value;
+    return passwordValue;
+  };
   return (
     <LoginWrapper>
       <LoginContainer>
@@ -47,7 +51,7 @@ export default function Login({
                 name="email-address"
                 value={email}
                 required
-                setEmail={emailHandler}
+                onChange={emailHandler}
               />
               <p>{emailError}</p>
             </FormInputWrapper>
@@ -59,6 +63,7 @@ export default function Login({
                 type="password"
                 name="password"
                 value={password}
+                onChange={passwordHandler}
               />
               <p>{passwordError}</p>
             </FormInputWrapper>

@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
 
@@ -11,6 +11,7 @@ const GlobalStyles = createGlobalStyle`
 }
 :root{
   --colour-white: #fff;
+  --darker-white: #eee;
   --bg-colour: #eee;
   --dark-pink: #E861A4;
   --light-pink: #FF6F8D;
@@ -30,7 +31,7 @@ body{
     font-family: 'Nunito', sans-serif;
     font-weight: 400;
     line-height: 1.6;
-    letter-spacing: 1.3;
+    letter-spacing: 1.3px;
     font-size: 1.6rem; 
     height: 100vh;
     background-color: var(--colour-white);
@@ -101,9 +102,9 @@ footer{
 export default GlobalStyles;
 
 export const Container = styled.main`
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	height: 100vh;
-	z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  z-index: 1000;
 `;

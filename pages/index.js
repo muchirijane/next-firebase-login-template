@@ -4,7 +4,7 @@ import Login from "../components/Login/Login";
 import fire from "../firebase/firebase";
 export default function Home() {
   const [user, setUser] = useState("");
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState("jane tracy");
   const [password, setPassword] = useState("");
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
