@@ -12,7 +12,8 @@ const GlobalStyles = createGlobalStyle`
 :root{
   --colour-white: #fff;
   --darker-white: #eee;
-  --bg-colour: #eee;
+  --bg-colour: #ddd;
+  --dark-green: #62ACB2;
   --dark-pink: #E861A4;
   --light-pink: #FF6F8D;
   --light-orange: #FDE8D0;
@@ -24,17 +25,16 @@ const GlobalStyles = createGlobalStyle`
 html {
     box-sizing: border-box;
     font-size: 62.5%;
-    
 }
 
 body{
     font-family: 'Nunito', sans-serif;
     font-weight: 400;
     line-height: 1.6;
-    letter-spacing: 1.3px;
+    letter-spacing: 1.6px;
     font-size: 1.6rem; 
     height: 100vh;
-    background-color: var(--colour-white);
+    background-color: var(--bg-color);
 }
 
 ::selection {
@@ -44,22 +44,28 @@ body{
 
 button{
   border: none;
-  padding: 1.6rem 3rem;
+  padding: 1.4rem 3.6rem;
 }
 .center{
   display: inline-block;
   margin: 3rem auto;
 }
 
-.link-animated{
+.button-animated{
   
 		display: inline-block;
-		color: var(--colour-pink);
+background-color: var(--dark-green);
+  color: var(--colour-white);
 		text-decoration: none;
+  cursor: pointer;
+  font-size: 1.8rem;
+  letter-spacing: 1.7px;
+  border-radius: 50px;
+  
 
 		&:hover {
 			transition: all .3s cubic-bezier(.88, .17, .05, 1) ;
-			color: var(--light-pink);
+			
 			text-decoration: none;
 			transform: translateY(-2px);
 		}
@@ -70,11 +76,6 @@ button{
 		}
 	
 }
-
-
-
-
-
 
  .menuOpen{
    display: block;

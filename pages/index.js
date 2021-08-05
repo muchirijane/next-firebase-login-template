@@ -2,9 +2,10 @@ import { useState, useEffect } from "react";
 import Layout from "../components/Layout/Layout";
 import Login from "../components/Login/Login";
 import fire from "../firebase/firebase";
+import HomePage from "../components/HomePage/HomePage";
 export default function Home() {
   const [user, setUser] = useState("");
-  const [email, setEmail] = useState("jane tracy");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
@@ -57,7 +58,7 @@ export default function Home() {
             break;
           case "auth/weak-password":
             setPasswordError(
-              "Your password is weak add characters (@$*?!) and numbers"
+              "Your password is short and weak add characters (@$*?!) and numbers"
             );
             break;
         }
@@ -82,18 +83,22 @@ export default function Home() {
 
   return (
     <Layout>
-      <Login
-        email={email}
-        setEmail={setEmail}
-        password={password}
-        setPassword={setPassword}
-        handleLogin={handleLogin}
-        handleSignup={handleSignup}
-        hasAccount={hasAccount}
-        setHasAccount={setHasAccount}
-        emailError={emailError}
-        passwordError={passwordError}
-      />
+      {user ? (
+        <HomePage handleLogout={handleLogout} />
+      ) : (
+        <Login
+          email={email}
+          setEmail={setEmail}
+          password={password}
+          setPassword={setPassword}
+          handleLogin={handleLogin}
+          handleSignup={handleSignup}
+          hasAccount={hasAccount}
+          setHasAccount={setHasAccount}
+          emailError={emailError}
+          passwordError={passwordError}
+        />
+      )}
     </Layout>
   );
 }
