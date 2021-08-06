@@ -1,7 +1,13 @@
 import { useState, useEffect } from "react";
 import Layout from "../components/Layout/Layout";
 import Login from "../components/Login/Login";
-import fire from "../firebase/firebase";
+import fire, {
+  auth,
+  googleProvider,
+  facebookProvider,
+  twitterProvider,
+  githubProvider,
+} from "../firebase/firebase";
 import HomePage from "../components/HomePage/HomePage";
 export default function Home() {
   const [user, setUser] = useState("");
@@ -67,6 +73,46 @@ export default function Home() {
   const handleLogout = () => {
     fire.auth().signOut();
   };
+  const googleLogIn = () => {
+    auth
+      .signInWithPopup(googleProvider)
+      .then((res) => {
+        console.log(res.user);
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+  };
+  const facebookLogIn = () => {
+    auth
+      .signInWithPopup(facebookProvider)
+      .then((res) => {
+        console.log(res.user);
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+  };
+  const twitterLogIn = () => {
+    auth
+      .signInWithPopup(twitterProvider)
+      .then((res) => {
+        console.log(res.user);
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+  };
+  const githubLogIn = () => {
+    auth
+      .signInWithPopup(githubProvider)
+      .then((res) => {
+        console.log(res.user);
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+  };
   const authListener = () => {
     fire.auth().onAuthStateChanged((user) => {
       if (user) {
@@ -97,6 +143,10 @@ export default function Home() {
           setHasAccount={setHasAccount}
           emailError={emailError}
           passwordError={passwordError}
+          googleLogIn={googleLogIn}
+          facebookLogIn={facebookLogIn}
+          twitterLogIn={twitterLogIn}
+          githubLogIn={githubLogIn}
         />
       )}
     </Layout>

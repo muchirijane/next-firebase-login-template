@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FaGoogle, FaFacebookF } from "react-icons/fa";
+import { FaGoogle, FaFacebookF, FaGithub, FaTwitter } from "react-icons/fa";
 import loginImage from "../../public/login-bg.jpg";
 import {
   LoginWrapper,
@@ -9,6 +9,8 @@ import {
   FormInputWrapper,
   ButtonWrapper,
   ErrorText,
+  ButtonText,
+  SocialIconWrapper,
 } from "./Login.styles.js";
 export default function Login({
   email,
@@ -21,6 +23,10 @@ export default function Login({
   passwordError,
   hasAccount,
   setHasAccount,
+  googleSignIn,
+  facebookLogIn,
+  twitterLogIn,
+  githubLogIn,
 }) {
   const emailHandler = (e) => {
     const emailValue = e.target.value;
@@ -71,6 +77,7 @@ export default function Login({
                 id='email-address'
                 type='text'
                 name='email-address'
+                placeholder='Enter your email'
                 value={email}
                 required
                 onChange={emailHandler}
@@ -84,6 +91,7 @@ export default function Login({
                 id='password'
                 type='password'
                 name='password'
+                placeholder='Enter your password'
                 required
                 value={password}
                 onChange={passwordHandler}
@@ -101,7 +109,8 @@ export default function Login({
                     Login
                   </button>
                   <p>
-                    Don't have an account ?<span onClick={logInHandler}>SignUp</span>{" "}
+                    Don't have an account ?
+                    <ButtonText onClick={logInHandler}>SignUp</ButtonText>{" "}
                   </p>
                 </>
               ) : (
@@ -115,7 +124,7 @@ export default function Login({
                   </button>
                   <p>
                     Do you have an account?{" "}
-                    <span onClick={signUpHandler}>LogIn</span>{" "}
+                    <ButtonText onClick={signUpHandler}>LogIn</ButtonText>{" "}
                   </p>
                 </>
               )}
@@ -123,10 +132,12 @@ export default function Login({
           </form>
           <div>
             {hasAccount ? <p>Or Login with</p> : <p>Or SignUp with</p>}
-            <div>
-              <FaGoogle />
-              <FaFacebookF />
-            </div>
+            <SocialIconWrapper>
+              <FaGoogle onClick={googleSignIn} />
+              <FaFacebookF onClick={facebookLogIn} />
+              <FaTwitter onClick={twitterLogIn} />
+              <FaGithub onClick={githubLogIn} />
+            </SocialIconWrapper>
           </div>
         </LoginFormWrapper>
       </LoginContainer>
