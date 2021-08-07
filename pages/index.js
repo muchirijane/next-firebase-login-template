@@ -125,7 +125,7 @@ export default function Home() {
   };
   useEffect(() => {
     authListener();
-  }, []);
+  }, [authListener]);
 
   return (
     <Layout>

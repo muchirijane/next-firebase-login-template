@@ -109,8 +109,8 @@ export default function Login({
                     Login
                   </button>
                   <p>
-                    Don't have an account ?
-                    <ButtonText onClick={logInHandler}>SignUp</ButtonText>{" "}
+                    ` Don't have an account ?
+                    <ButtonText onClick={logInHandler}>SignUp</ButtonText> `
                   </p>
                 </>
               ) : (
@@ -123,8 +123,8 @@ export default function Login({
                     SignUp
                   </button>
                   <p>
-                    Do you have an account?{" "}
-                    <ButtonText onClick={signUpHandler}>LogIn</ButtonText>{" "}
+                    ` Do you have an account?{" "}
+                    <ButtonText onClick={signUpHandler}>LogIn</ButtonText> `
                   </p>
                 </>
               )}
