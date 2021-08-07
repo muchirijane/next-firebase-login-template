@@ -24,8 +24,8 @@ export default function Meta() {
       <link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png' />
 
       <link rel='icon' href='/favicon.ico' />
-      <link rel='canonical' href='https://jane.vercel.app/' />
-      <link rel='preconnect' href='https://fonts.googleapis.com' />
+
+      <title>Next Js Login template</title>
     </Head>
   );
 }

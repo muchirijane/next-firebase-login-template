@@ -14,7 +14,8 @@ class MyDocument extends Document {
             href='https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap'
             rel='stylesheet'
           />
-          <title>Next Js Login template</title>
+          <link rel='canonical' href='https://jane.vercel.app/' />
+          <link rel='preconnect' href='https://fonts.googleapis.com' />
         </Head>
         <body>
           <Main />
