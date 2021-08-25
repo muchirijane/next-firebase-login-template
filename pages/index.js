@@ -71,16 +71,34 @@ export default function Home() {
       });
   };
   const handleLogout = () => {
-    fire.auth().signOut();
+    fire
+      .auth()
+      .signOut()
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
   };
   const googleLogIn = () => {
     auth
       .signInWithPopup(googleProvider)
       .then((res) => {
-        console.log(res.user);
+        let credential = res.credential;
+
+        // The signed-in user info.
+        let user = res.user;
       })
       .catch((err) => {
-        console.log(err.message);
+        // Handle Errors here.
+        let errorCode = err.code;
+        let errorMessage = err.message;
+        // The email of the user's account used.
+        let email = err.email;
+        // The firebase.auth.AuthCredential type that was used.
+        let credential = err.credential;
+        console.log(errorMessage);
       });
   };
   const facebookLogIn = () => {
@@ -147,6 +165,7 @@ export default function Home() {
           facebookLogIn={facebookLogIn}
           twitterLogIn={twitterLogIn}
           githubLogIn={githubLogIn}
+          claerInputs={clearInputs}
         />
       )}
     </Layout>

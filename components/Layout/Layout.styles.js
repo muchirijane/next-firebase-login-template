@@ -71,7 +71,7 @@ const GlobalStyles = createGlobalStyle`
 
     &:hover {
       transition: all .3s cubic-bezier(.88, .17, .05, 1);
-
+      background-color: var(--dark-pink);
       text-decoration: none;
       transform: translateY(-2px);
     }

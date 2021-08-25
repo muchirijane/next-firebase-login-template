@@ -1,11 +1,15 @@
 import Link from "next/link";
+import { Section, Header, Nav, Menu, Logo, ButtonWrapper } from "./HomePage.Styles";
 export default function HomePage({ handleLogout }) {
   return (
     <>
-      <section>
-        <header>
-          <nav>
-            <ul>
+      <Section>
+        <Header>
+          <Logo>
+            <h1>Budgetfy App</h1>
+          </Logo>
+          <Nav>
+            <Menu>
               <li>
                 <Link href='/about'>
                   <a>About</a>
@@ -21,14 +25,16 @@ export default function HomePage({ handleLogout }) {
                   <a>Contact</a>
                 </Link>
               </li>
-            </ul>
-            <div>
-              <button onClick={handleLogout}>LogOut</button>
-            </div>
-          </nav>
-        </header>
-        <h1>Welcome </h1>
-      </section>
+            </Menu>
+            <ButtonWrapper>
+              <button className='button-animated' onClick={handleLogout}>
+                LogOut
+              </button>
+            </ButtonWrapper>
+          </Nav>
+        </Header>
+        <h2>Welcome </h2>
+      </Section>
     </>
   );
 }

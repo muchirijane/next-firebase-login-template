@@ -27,6 +27,7 @@ export default function Login({
   facebookLogIn,
   twitterLogIn,
   githubLogIn,
+  clearInputs,
 }) {
   const emailHandler = (e) => {
     const emailValue = e.target.value;
