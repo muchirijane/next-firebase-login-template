@@ -29,7 +29,7 @@ export const Menu = styled.ul`
     }
     a {
       text-decoration: none;
-      color: var(--dark-green);
+      color: #333;
 
       &:hover {
         color: var(--dark-pink);

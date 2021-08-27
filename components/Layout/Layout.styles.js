@@ -14,6 +14,7 @@ const GlobalStyles = createGlobalStyle`
     --colour-white: #fff;
     --darker-white: #f5f5f5;
     --bg-colour: #ddd;
+    --green: #02403e;
     --dark-green: #028682;
     --colour-black: #000;
     --dark-pink: #E861A4;
@@ -23,6 +24,8 @@ const GlobalStyles = createGlobalStyle`
     --pink-shadow: 0px 3px 10px rgba(232, 97, 164, 0.2);
     --big-shadow: 0px 8px 30px rgba(0, 0, 0, 0.1);
     --medium-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
+    --button-shadow: 0px 3px 20px rgba(107, 233, 229, 0.3);
+    --button_Hover-shadow: 0px 3px 20px rgba(182, 0, 77, 0.3);
     --light-green: #6be9e5;
   }
 
@@ -39,6 +42,9 @@ const GlobalStyles = createGlobalStyle`
     font-size: 1.6rem;
     height: 100vh;
     background-color: var(--bg-color);
+  }
+  
+  
   }
 
   ::selection {
@@ -67,6 +73,7 @@ const GlobalStyles = createGlobalStyle`
     letter-spacing: 1.7px;
     border-radius: 50px;
     margin-bottom: 2rem;
+    box-shadow: var(--button-shadow);
 
 
     &:hover {
@@ -74,6 +81,7 @@ const GlobalStyles = createGlobalStyle`
       background-color: var(--dark-pink);
       text-decoration: none;
       transform: translateY(-2px);
+      box-shadow: var(--button_Hover-shadow);
     }
 
     &:active {
@@ -106,8 +114,23 @@ const GlobalStyles = createGlobalStyle`
     }
   }
 
+  
+
 `;
 
 export default GlobalStyles;
 
 export const Container = styled.main``;
+
+export const device = {
+  mobileS: `only screen and (max-width: 20em)`, //320px
+  mobileM: `only screen and (max-width: 23.44em)`, //375px
+  mobileL: `only screen and (max-width: 28em)`, //450px
+  tabletS: `only screen and (max-width: 37em)`, //600px
+  tablet: `only screen and (max-width: 48em)`, //768px
+  laptopS: `only screen and (max-width: 65em)`, //1050px
+  laptopM: `only screen and (max-width: 75em)`, //1200px
+  laptopL: `only screen and (max-width: 90em)`, //1400px
+  Mlaptop: `only screen and (min-width: 90em)`, //1400px
+  desktop: `only screen and (min-width: 112.5em)`, //1800px
+};

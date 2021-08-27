@@ -1,12 +1,24 @@
 import styled from "styled-components";
-
+import { device } from "../Layout/Layout.styles";
 export const LoginWrapper = styled.section`
-  //background-color: var(--colour-white);
   margin: 4% auto;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(630px, 1fr));
   background: var(--darker-white);
   border-radius: 20px;
+
+  @media ${device.laptopS} {
+    width: 50rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  @media ${device.tabletS} {
+    width: 40rem;
+  }
+  @media only screen and (max-width: 27em) {
+    width: 33rem;
+  }
 `;
 export const LoginContainer = styled.div`
   display: grid;
@@ -14,6 +26,12 @@ export const LoginContainer = styled.div`
   grid-gap: 6rem;
   height: 100%;
   width: 100rem;
+
+  @media ${device.laptopS} {
+    width: 0;
+    display: flex;
+    justify-content: center;
+  }
 `;
 
 export const LoginImageWrapper = styled.div`
@@ -51,12 +69,26 @@ export const LoginImageWrapper = styled.div`
 
     border-bottom-left-radius: 20px;
   }
+
+  @media ${device.laptopS} {
+    display: none;
+  }
 `;
 
 export const LoginFormWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  h1{
+    @media ${device.laptopS} {
+      font-size: 2rem;
+    }
+  }
+  h2{
+    @media ${device.laptopS} {
+      font-size: 1.8rem;
+    }
 `;
 
 export const FormInputWrapper = styled.div`
