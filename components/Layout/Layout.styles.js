@@ -18,15 +18,16 @@ const GlobalStyles = createGlobalStyle`
     --dark-green: #028682;
     --colour-black: #000;
     --dark-pink: #E861A4;
+    --lighter-pink: rgba(232, 97, 164, 0.52);
     --light-pink: #FF6F8D;
     --light-orange: #FDE8D0;
-    --lighter-pink: rgba(232, 97, 164, 0.52);
+    --light-green: #6be9e5;
     --pink-shadow: 0px 3px 10px rgba(232, 97, 164, 0.2);
     --big-shadow: 0px 8px 30px rgba(0, 0, 0, 0.1);
     --medium-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
-    --button-shadow: 0px 3px 20px rgba(107, 233, 229, 0.3);
-    --button_Hover-shadow: 0px 3px 20px rgba(182, 0, 77, 0.3);
-    --light-green: #6be9e5;
+    --button-shadow: 0px 3px 20px rgba(107, 233, 229, 0.15);
+    --button_Hover-shadow: 0px 3px 20px rgba(182, 0, 77, 0.13);
+    
   }
 
   html {
@@ -43,8 +44,8 @@ const GlobalStyles = createGlobalStyle`
     height: 100vh;
     background-color: var(--bg-color);
   }
-  
-  
+
+
   }
 
   ::selection {
@@ -114,7 +115,7 @@ const GlobalStyles = createGlobalStyle`
     }
   }
 
-  
+
 
 `;
 

@@ -1,7 +1,41 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next-login-template
+## Live Code - [Preview](https://next-firebase-login-template.vercel.app/)
+<!-- ctrl+shift+v : preview -->
+![Project Image](img/login-template.png)
 
-## Getting Started
+---
 
+### Table of Contents
+- [Description](#description)
+- [How To Use](#how-to-use)
+- [Author Info](#author-info)
+
+---
+
+## Live - [Preview](https://next-firebase-login-template.vercel.app/)
+
+## Description
+- I created this login and sign up template to see how to use firebase and firebase cloud. I was able to enable the FaceBook, GitHub and Google
+for sign in or login. Learnt how create apps that need facebook or GitHub authentication for users to access an application.To make routing easier I used Next Js with is amazing for static generated websites and has a great SEO performance. The advantage of using firebase it's able to detect if an email address was already used before or it was blocked in the firebase dashboard.
+
+#### Technologies
+- Styled-component
+- React
+- Firebase
+
+
+
+[Back To The Top](Next-login-template)
+
+---
+#### Installation
+```bash
+    Use a command Prompt and type : npm install
+    # or
+    npm i
+```
+
+## How To Use
 First, run the development server:
 
 ```bash
@@ -12,23 +46,29 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+#### How to use:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+1. Create your Firebase Project
+2. Activate authentication on your project
+ - Email
+ - Google
+ - Facebook
+ - Github
+3. Create a .env file and paste your api key like this:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```
+NEXT_PUBLIC_API_KEY=yourapikeyhere
+```
 
-## Learn More
+4. Go to firebase/Firebase.js and fill on with your project details
+5. npm run dev
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Author Info
+#### [Jane Muchiri ](https://github.com/muchirijane)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- Twitter - [@TracyCss](https://twitter.com/TracyCss)
+- Website - [portfolio](https://jane.vercel.app/)
 
-## Deploy on Vercel
+[Back To The Top](Next-login-template)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
