@@ -11,7 +11,7 @@ export default function Meta() {
       <meta name='author' content='Jane Muthoni Muchiri' />
       <meta
         name='Keywords'
-        content='front end developer, self taught developer, web developer, Html and CSS, portfolio, javascript, react'
+        content='front end developer, self taught developer, login App with Javascript and firebase'
       />
       <meta
         name='description'
@@ -25,7 +25,7 @@ export default function Meta() {
 
       <link rel='icon' href='/favicon.ico' />
 
-      <title>Next Js Login template</title>
+      <title>Budget Guide App</title>
     </Head>
   );
 }

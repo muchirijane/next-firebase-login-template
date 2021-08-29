@@ -138,12 +138,12 @@ export default function Login() {
   const emailHandler = (e) => {
     const emailValue = e.target.value;
     setEmail(emailValue);
-    // return emailValue;
+
   };
   const passwordHandler = (e) => {
     const passwordValue = e.target.value;
     setPassword(passwordValue);
-    //return passwordValue;
+
   };
 
   const signUpHandler = () => {
@@ -154,8 +154,7 @@ export default function Login() {
   };
   const submitHandler = (e) => {
     e.preventDefault();
-    // clearInputs();
-    // clearErrors();
+
   };
 
   return (
@@ -170,12 +169,12 @@ export default function Login() {
         <LoginFormWrapper>
           {hasAccount ? (
             <div>
-              <h1>Welcome Back to Budgetfy</h1>
+              <h1>Welcome Back to Budget Guide</h1>
               <h2>LogIn to your account</h2>
             </div>
           ) : (
             <div>
-              <h1>Welcome to Budgetfy</h1>
+              <h1>Welcome to Budget Guide</h1>
               <h2>Create your account</h2>
             </div>
           )}
